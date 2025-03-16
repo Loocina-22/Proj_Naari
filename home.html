@@ -80,6 +80,60 @@
             font-size: 1.1rem;
         }
 
+    
+        /* Helpline Tiles Styling */
+        .helpline-tiles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .tile {
+            background-color: #ffe0e6;
+            border: 2px solid #c5001a;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .tile h3 {
+            color: #c5001a;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .tile p {
+            font-size: 1.2rem;
+            color: #002c54;
+            font-weight: bold;
+        }
+
+        .tile:hover {
+            transform: scale(1.05);
+            background-color: #ffccd1;
+        }
+
+
+        .static-section2 {
+            background-color: #be144d;
+            padding: 50px 20px;
+            text-align: center;
+            color: #aaa;
+        }
+
+        .static-section2 h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .static-section2 p {
+            font-size: 1.1rem;
+        }
+
         /* Grid Layout for Sections */
         .section-container {
             display: grid;
@@ -103,7 +157,7 @@
 
         .section h4 {
             font-size: 1.5rem;
-            color: #333;
+            color: #be144d;
             margin-bottom: 15px;
         }
 
@@ -179,7 +233,12 @@
             .section-container {
                 grid-template-columns: 1fr; /* 1 column on small screens */
             }
+            /* Responsive Design */
+            .tile {
+                width: 100%;
+            }
         }
+        
     </style>
 </head>
 <body>
@@ -188,11 +247,9 @@
     <header>
         <h1>Naari - The Women Essentials Website</h1>
         <nav>
-            <a href="#">About Us</a>
-            <a href="#">Help and Support</a>
-            <a href="#">Helpline Numbers</a>
-            <a href="#">Change Password</a>
-            <a href="#">Logout</a> <!--Redirects to Home Page -->
+            <a href="#about-us">About Us</a>
+            <a href="#helpline">Help and Support</a>
+            <a href="login.html">Logout</a> <!--Redirects to Home Page -->
         </nav>
     </header>
 
@@ -237,7 +294,7 @@
             <p>Connect with NGOs in your area and explore how they work towards supporting and uplifting women.</p>
         </div>
     
-        <div class="section" onclick="openModal('Memorial Wall', '')">
+        <div class="section" onclick="openModal('Memorial Wall', 'Memorial.html')">
             <h4>Memorial Wall</h4>
             <p>Honor and remember those who made a difference in the journey towards women's empowerment and safety.</p>
         </div>
@@ -259,6 +316,52 @@
         <p>Post your Story Anonymously!</p>
     </section>
 
+    <section id="about-us">
+        <div class="static-section2">
+            <h2>Who are we?</h2>
+            <p>Welcome to Naari, a project born from passion, purpose, and the unwavering belief 
+                in creating a safer world for women. We are a team of four young women pursuing 
+                our Master’s in Informatics, united by a shared dream: to use technology as a 
+                tool for empowerment and change.</p>
+            <p>Through Naari, we aim to foster a supportive community where women can share their 
+                experiences, access crucial resources, and find their voices. From connecting users 
+                with vital helplines to offering tools for personal safety and well-being, our platform 
+                is built with the real needs of women in mind.</p>
+
+            <p>Together, we hope to inspire change, spark conversations, and build a world where every
+            woman can walk with confidence and dignity. Join us in this journey to make safety 
+            and empowerment a reality for all.</p>
+        </div>
+    </section>
+
+    <section id="helpline" class="static-section1">
+        <h2>Helpline Numbers</h2>
+        <p>If you or someone you know needs help, reach out to these helpline numbers. You are not alone.</p>
+        
+        <div class="helpline-tiles">
+            <div class="tile">
+                <h3>Women Helpline (All India)</h3>
+                <p>1091</p>
+            </div>
+            <div class="tile">
+                <h3>Police (Emergency)</h3>
+                <p>100</p>
+            </div>
+            <div class="tile">
+                <h3>Domestic Violence Helpline</h3>
+                <p>181</p>
+            </div>
+            <div class="tile">
+                <h3>National Commission for Women</h3>
+                <p>011-26942369</p>
+            </div>
+            <div class="tile">
+                <h3>Childline (For Children)</h3>
+                <p>1098</p>
+            </div>
+        </div>
+    </section>
+  
     <!-- Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
